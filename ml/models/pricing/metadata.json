@@ -1,0 +1,11 @@
+{
+  "model_type": "RidgeLinearRegression-Numpy",
+  "region": "India",
+  "currency": "INR",
+  "pricing_formula": "weekly_premium = base_weekly_premium + risk_adjustment - trust_discount",
+  "base_weekly_premium": 10.0,
+  "premium_mae_inr": 0.7377020749169214,
+  "risk_adjustment_rmse": 0.8086510674301758,
+  "trust_discount_rmse": 0.47203534044079437,
+  "training_date": "2026-04-03T22:47:15.424600"
+}

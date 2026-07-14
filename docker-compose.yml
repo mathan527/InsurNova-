@@ -1,0 +1,78 @@
+version: '3.8'
+
+services:
+  # Redis (for queue management)
+  redis:
+    image: redis:7-alpine
+    container_name: insurnova-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - insurnova-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ML API Service (Python)
+  ml-api:
+    build:
+      context: .
+      dockerfile: deployment/docker/Dockerfile.python
+    container_name: insurnova-ml-api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./ml/models:/app/ml/models
+    networks:
+      - insurnova-network
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Event Processor Service (Node.js)
+  event-processor:
+    build:
+      context: .
+      dockerfile: deployment/docker/Dockerfile.node
+    container_name: insurnova-event-processor
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_SERVICE_KEY=${SUPABASE_SERVICE_KEY}
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - ML_API_URL=http://ml-api:8000
+      - LOG_LEVEL=info
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - insurnova-network
+    depends_on:
+      - redis
+      - ml-api
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:3000/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  redis_data:
+    driver: local
+
+networks:
+  insurnova-network:
+    driver: bridge

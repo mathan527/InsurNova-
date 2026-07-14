@@ -1,0 +1,13 @@
+{
+  "model_type": "GradientBoostingRegressor",
+  "train_r2": 0.98574392419953,
+  "test_r2": 0.9584385599074219,
+  "train_rmse": 0.013055049482861706,
+  "test_rmse": 0.02213475279842028,
+  "train_accuracy_percent": 98.574392419953,
+  "test_accuracy_percent": 95.84385599074218,
+  "target_achieved": true,
+  "n_features": 26,
+  "training_date": "2026-04-02T13:55:52.670343",
+  "training_samples": 40000
+}

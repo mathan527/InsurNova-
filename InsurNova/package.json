@@ -1,0 +1,44 @@
+{
+  "name": "insurnova",
+  "version": "1.0.0",
+  "description": "AI-Powered Parametric Insurance Platform with Agentic Workflow",
+  "main": "index.js",
+  "scripts": {
+    "start": "node services/event-processor/index.js",
+    "dev": "nodemon services/event-processor/index.js",
+    "test": "jest",
+    "test:agents": "jest tests/agents",
+    "lint": "eslint .",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
+  },
+  "keywords": [
+    "insurance",
+    "ai",
+    "agents",
+    "parametric",
+    "machine-learning"
+  ],
+  "author": "InsurNova Team",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.101.1",
+    "axios": "^1.6.0",
+    "bull": "^4.12.0",
+    "cors": "^2.8.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "ioredis": "^5.3.2",
+    "joi": "^17.11.0",
+    "node-cron": "^3.0.3",
+    "uuid": "^9.0.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.54.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
+  }
+}

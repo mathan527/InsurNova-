@@ -1,0 +1,37 @@
+# NOTE: MongoDB has been replaced with Supabase (PostgreSQL)
+# This file is kept for reference only
+# See main docker-compose.yml for current configuration
+#
+# To use Supabase, set these environment variables:
+# - SUPABASE_URL=https://your-project.supabase.co
+# - SUPABASE_SERVICE_KEY=your-service-key
+
+version: '3.8'
+
+# MongoDB service removed - migrated to Supabase
+# Original configuration preserved in comments for reference:
+#
+# services:
+#   mongodb:
+#     image: mongo:7.0
+#     container_name: insurnova-mongodb
+#     restart: unless-stopped
+#     ports:
+#       - "27017:27017"
+#     environment:
+#       MONGO_INITDB_DATABASE: insurnova
+#     volumes:
+#       - mongodb_data:/data/db
+#       - mongodb_config:/data/configdb
+#     networks:
+#       - insurnova-network
+#
+# volumes:
+#   mongodb_data:
+#     driver: local
+#   mongodb_config:
+#     driver: local
+#
+# networks:
+#   insurnova-network:
+#     driver: bridge

@@ -1,0 +1,12 @@
+{
+  "model_type": "GradientBoostingClassifier",
+  "accuracy": 1.0,
+  "f1_score": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "roc_auc": 0.99,
+  "n_features": 9,
+  "training_date": "2026-04-02T13:55:52.670343",
+  "training_samples": 10000,
+  "feature_names": ["claim_amount", "total_claims", "claims_last_30_days", "policy_age_days", "credit_score", "late_night_claims", "duplicate_claims", "verification_failures", "claim_to_premium"]
+}

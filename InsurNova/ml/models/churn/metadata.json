@@ -1,0 +1,9 @@
+{
+  "model_type": "GradientBoostingClassifier",
+  "accuracy": 0.94,
+  "f1_score": 0.91,
+  "roc_auc": 0.97,
+  "n_features": 8,
+  "training_date": "2026-04-02T13:55:52.670343",
+  "training_samples": 15000
+}
