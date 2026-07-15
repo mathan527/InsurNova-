@@ -18,8 +18,6 @@
 [![Video Demo](https://img.shields.io/badge/🎥_Video_Demo-Watch_Now-red?style=for-the-badge)](https://drive.google.com/file/d/1GOldiBfTKHqiIpW6uXd5u13SKiOvt2ad/view?usp=sharing)
 [![Documentation](https://img.shields.io/badge/📚_Documentation-Read_Docs-blue?style=for-the-badge)](#-project-overview)
 
-**🔗 Deployed App:** [https://frontend-nine-ebon-42.vercel.app/](https://frontend-nine-ebon-42.vercel.app/)  
-**🎬 Demo Video:** [Watch on Google Drive](https://drive.google.com/file/d/1GOldiBfTKHqiIpW6uXd5u13SKiOvt2ad/view?usp=sharing)
 
 ### 🔑 Demo Credentials
 **Email:** praveenkumar@gmail.com  
