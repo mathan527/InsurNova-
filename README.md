@@ -10,11 +10,6 @@
 
 **Fully automated AI-powered parametric insurance platform for gig workers**
 
-
-### 🔑 Demo Credentials
-**Email:** praveenkumar@gmail.com  
-**Password:** praveen@123
-
 </div>
 
 ---
