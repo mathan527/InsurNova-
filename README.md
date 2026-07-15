@@ -10,14 +10,6 @@
 
 **Fully automated AI-powered parametric insurance platform for gig workers**
 
----
-
-### 🌐 Quick Links
-
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_App-success?style=for-the-badge)](https://frontend-nine-ebon-42.vercel.app/)
-[![Video Demo](https://img.shields.io/badge/🎥_Video_Demo-Watch_Now-red?style=for-the-badge)](https://drive.google.com/file/d/1GOldiBfTKHqiIpW6uXd5u13SKiOvt2ad/view?usp=sharing)
-[![Documentation](https://img.shields.io/badge/📚_Documentation-Read_Docs-blue?style=for-the-badge)](#-project-overview)
-
 
 ### 🔑 Demo Credentials
 **Email:** praveenkumar@gmail.com  
